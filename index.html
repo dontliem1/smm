@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <title>Shower Presentation Engine</title>
+    <title>Дизайн в социальных сетях</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
@@ -9,28 +9,68 @@
         .shower {
             --slide-ratio: calc(16 / 9);
         }
+        .slide {
+            background-color: #000;
+            color: fff;
+        }
+        .slide>*, .slide h2 {
+            color: #fff;
+        }
+        .slide::after {
+            background: none;
+        }
+        .progress::before {
+            background-color: var(--color-line);
+        }
+        .slide h3 {
+            line-height: 1;
+            margin-top: 0;
+        }
+        .slide li {
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+        .slide blockquote+figcaption {
+            text-align: right;
+            font-style: normal;
+        }
+        .slide input[type=number] {
+            font: inherit;
+            background: none;
+            color: inherit;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #fff;
+            padding: 0;
+            margin: 0;
+        }
+        .slide a:not(:hover) {
+            color: inherit;
+        }
+        .section-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 5em;
+        }
+        .section-title p {
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body class="shower list">
 
     <header class="caption">
-        <h1>Shower Presentation Engine</h1>
-        <p>Yours Truly, Famous Inc.</p>
+        <h1>Дизайн в социальных сетях</h1>
+        <p><a href="https://перваяшколасмм.рф" target="_blank">Первая школа SMM</a></p>
     </header>
 
-    <section class="slide" id="cover">
-        <h2>Shower Presentation Engine</h2>
-        <p>Brought to you by <a href="https://pepelsbey.net">Vadim Makeev</a></p>
-        <figure>
-            <img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-            <figcaption class="copyright right white">
-                <a href="https://fiftyfootshadows.net">© John Carey</a>
-            </figcaption>
-        </figure>
+    <section class="slide clear" id="cover">
+        <h2>Дизайн в соцсетях</h2>
+        <p><a href="https://dontliem1.github.io/" target="_blank">Михаил</a> из Первой школы SMM</p>
         <style>
             #cover h2 {
-                margin: 30px 0 0;
-                color: white;
+                margin: 150px 0 0;
                 text-align: center;
                 font-size: 70px;
             }
@@ -38,173 +78,892 @@
             #cover p {
                 margin: 10px 0 0;
                 text-align: center;
-                color: white;
                 font-style: italic;
                 font-size: 20px;
             }
+        </style>
+    </section>
 
-            #cover p a {
-                color: white;
+    <section class="slide" id="plan">
+        <h2>План занятий</h2>
+        <div class="columns three">
+            <div>
+                <time datetime="2020-02-24">24 февраля</time>
+                <h3>О дизайне</h3>
+                <ul>
+                    <li>История визуальных коммуникаций</li>
+                    <li>Что такое дизайн</li>
+                    <li>Пиксель, вектор, цвета</li>
+                    <li>Базовые принципы</li>
+                    <li>Оформление соцсетей</li>
+                </ul>
+            </div>
+            <div>
+                <time datetime="2020-02-28">28 февраля</time>
+                <h3>Волшебная кнопка</h3>
+                <ul>
+                    <li>Приложения и сервисы</li>
+                    <li>Как повысить охват</li>
+                    <li>Как нанять фотографа</li>
+                    <li>Источники вдохновения и материалов. Права</li>
+                </ul>
+            </div>
+            <div>
+                <time datetime="2020-03-02">2 марта</time>
+                <h3>Фотошоп</h3>
+                <ul>
+                    <li>Инструменты и слои</li>
+                    <li>Создаём картинку к посту</li>
+                    <li>Магия</li>
+                </ul>
+            </div>
+        </div>
+        <style>
+            #plan .columns {
+                font-size: 90%;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="caves">
+        <h2>40 000 лет назад</h2>
+        <style>
+            #caves {
+                background: url('pictures/caves.jpg') center /cover #000;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="hieroglyphs">
+        <h2>11 000 лет назад</h2>
+        <style>
+            #hieroglyphs {
+                background: url('pictures/hieroglyphs.jpg') center /cover #000;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="alphabet">
+        <h2>300 лет до н.э.</h2>
+        <style>
+            #alphabet {
+                background: url('pictures/alphabet.jpg') center /cover #000;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="gutenberg">
+        <h2 hidden>Средневековье</h2>
+        <style>
+            #gutenberg {
+                background: url('pictures/gutenberg.jpg') center /cover #000;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="design1">
+        <h2 hidden>Современный дизайн. Часть 1</h2>
+        <style>
+            #design1 {
+                background: url('pictures/design1.jpg') center /cover #000;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="design2">
+        <h2 hidden>Современный дизайн. Часть 2</h2>
+        <style>
+            #design2 {
+                background: url('pictures/design2.jpg') center /cover #000;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="term">
+        <h2 hidden>Определение</h2>
+        <figure>
+            <blockquote>
+                <p>Дизайн — изменение объекта для достижения определённых задач.</p>
+            </blockquote>
+            <figcaption>Первая школа SMM</a></figcaption>
+        </figure>
+        <style>
+            #term blockquote p {
+                font-size: 2.75em;
+                line-height: 1.25;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="categories">
+        <h2>Три категории дизайна</h2>
+        <img class="place next left" height="100%" src="pictures/stool.jpg" alt="Табуретка.">
+        <img class="place next" height="100%" src="pictures/throne.jpg" alt="Трон.">
+        <img class="place next right" height="100%" src="pictures/chair.jpg" alt="Комфортное кресло на колёсиках.">
+        <style>
+            #categories h2 {
+                position: relative;
+                z-index: 1;
+                text-shadow: 3px 3px 8px #000;
             }
         </style>
     </section>
 
     <section class="slide">
-        <h2>Shower key features</h2>
-        <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Themes are separated from engine</li>
-            <li>Fully keyboard accessible</li>
-            <li>Printable to PDF</li>
-        </ol>
-        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-    </section>
-
-    <section class="slide">
-        <h2>Plain text on your slides</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-    </section>
-
-    <section class="slide">
-        <h2>Two columns if you like</h2>
+        <h2>Изображения состоят из пикселей</h2>
         <div class="columns two">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+            <p><img src="pictures/mario.jpg" width="100%" alt="Пиксельный Марио."></p>
+            <p>Один пиксель — один цвет<br><img src="pictures/pixels.jpg" width="100%" alt="Пиксели на экране."></p>
+        </div>
+    </section>
+
+    <section class="slide" id="color">
+        <h2>Цветовая модель RGB</h2>
+        <form class="columns two">
+            <fieldset>
+                <p><label>R: <input type="range" min="0" max="255" name="r" pattern="[0-9]*" value="255"> <output>255</output></label></p>
+                <p><label>G: <input type="range" min="0" max="255" name="g" pattern="[0-9]*" value="255"> <output>255</output></label></p>
+                <p><label>B: <input type="range" min="0" max="255" name="b" pattern="[0-9]*" value="255"> <output>255</output></label></p>
+                <output name="hex">#FFFFFF</output>
+            </fieldset>
+            <div class="model rgb">
+                <svg viewBox="0 0 90 90">
+                    <g class="isolate">
+                        <circle cx="40" cy="40" r="40" id="r" fill="#f00"/>
+                        <circle cx="50" cy="40" r="40" id="g" fill="#0f0"/>
+                        <circle cx="45" cy="50" r="40" id="b" fill="#00f"/>
+                    </g>
+                </svg>
+            </div>
+        </form>
+        <style>
+            #color fieldset {
+                padding: 1em;
+                border: 0;
+                border-radius: 1em;
+                margin: 0;
+                background-color: var(--color-line);
+                align-self: center;
+                text-align: center;
+            }
+            #color label {
+                text-align: left;
+                display: flex;
+            }
+            #color input{
+                flex-grow: 1;
+                margin-left: 1em;
+                margin-right: 1em;
+            }
+            .rgb circle {
+                mix-blend-mode: screen;
+            }
+            #color output {
+                text-transform: uppercase;
+                flex-basis: 1.75em;
+                flex-shrink: 0;
+            }
+        </style>
+        <script>
+            document.querySelector('#color form').oninput = function() {
+                let r = parseInt(this.r.value,10);
+                let g = parseInt(this.g.value,10);
+                let b = parseInt(this.b.value,10);
+                this.r.nextElementSibling.value = r;
+                this.g.nextElementSibling.value = g;
+                this.b.nextElementSibling.value = b;
+                this.querySelector('#r').setAttribute('fill','rgb('+r+',0,0)');
+                this.querySelector('#g').setAttribute('fill','rgb(0,'+g+',0)');
+                this.querySelector('#b').setAttribute('fill','rgb(0,0,'+b+')');
+                this.hex.value='#'+r.toString(16).padStart(2, '0')+g.toString(16).padStart(2, '0')+b.toString(16).padStart(2, '0');
+            }
+        </script>
+    </section>
+
+    <section class="slide" id="graphics">
+        <h2>Экранная графика <img src="pictures/sup.svg" width="60" alt="Логотип"></h2>
+        <div class="columns two">
+            <div>
+                <h3>Растр</h3>
+                <img src="pictures/sup.png" width="60" alt="Логотип">
+            </div>
+            <div>
+                <h3>Вектор</h3>
+                <img src="pictures/sup.svg" width="60" alt="Логотип">
+            </div>
+        </div>
+        <style>
+            #graphics .columns {
+                text-align: center;
+            }
+            #graphics h2 {
+                position: relative;
+            }
+            #graphics h2>img {
+                position: absolute;
+                top: -10px;
+                right: 0;
+            }
+            #graphics .columns>div {
+                padding-left: 1.5em;
+                padding-right: 1.5em;
+            }
+            #graphics .columns img {
+                width: 100%;
+                height: auto;
+            }
+            #graphics h3 {
+                font-weight: 300;
+            }
+        </style>
+    </section>
+
+    <section class="slide section-title">
+        <h2>Универсальные принципы дизайна</h2>
+        <p>Руководствоваться ими или нет — дело каждого.<br>Важно делать это осознанно.</p>
+    </section>
+
+    <section class="slide" id="distance">
+        <h2>I. <a href="https://www.artlebedev.ru/kovodstvo/sections/136/" target="_blank">Теория близости</a></h2>
+        <p><a href="https://bureau.ru/bb/soviet/20140818/" target="_blank">внутреннее ≤ внешнее</a></p>
+        <div>прописные нужно разрежать, строчные нельзя разрежать, вертикальные штрихи строчных и прописных должны стоять через равные промежутки, разрядка прописных должна быть меньше интерлиньяжа, пробел между строками прописных букв не может быть меньше высоты буквы, интерлиньяж должен быть больше межсловных пробелов, при минимальном интерлиньяже нижние выносные элементы верхней строки почти касаются верхних выносных элементов следующей строки, чем длиннее строка, тем больше интерлиньяж, интерлиньяж не должен быть больше внешних полей, элементы списка должны иметь между собой дополнительный отступ больше интерлиньяжа, номер страницы должен стоять ближе к полосе, чем к краю страницы, заголовок в тексте должен стоять ближе к следующему абзацу, чем к предыдущему, расстояние от заголовка до абзаца не должно быть меньше межстрочного интервала заголовка…</div>
+        <style>
+            #distance h2 {
+                font-size: 5em;
+                position: absolute;
+                left: 0;
+                right: 0;
+                text-align: center;
+                top: 15%;
+            }
+            #distance p {
+                font-size: 2em;
+                position: absolute;
+                left: 0;
+                right: 0;
+                text-align: center;
+                bottom: 5%;
+            }
+            #distance div {
+                position: absolute;
+                left: .75em;
+                right: .75em;
+                text-align: justify;
+                top: 0;
+                bottom: 0;
+                z-index: -1;
+                color: #555;
+                line-height: 1.4;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="format">
+        <h2><a href="https://bureau.ru/bb/soviet/20140908/" target="_blank">II. Формат и поля</a></h2>
+        <div class="column-left">
+            <p>На ощущение от вёрстки решительно влияет соотношение верхнего и бокового полей. Одинаковые вертикальные и горизонтальные поля — признак слабой, любительской, невнимательной вёрстки.</p>
+            <p>Пропорции полей могут быть математически связаны с пропорциями формата или даже букв используемого шрифта, могут быть вытянуты на глаз в ширину или в высоту.</p>
+        </div>
+        <div class="column-right">
+            <p>Добавление плашки, линейки или рамки создаёт новый формат с собственным содержанием и пропорциями полей. Вертикальные и горизонтальные поля не должны быть равны друг другу, причём нижнее поле должно быть больше.</p>
+            <p>Расстояния вокруг горизонтальной границы модулей не могут быть равны: например отступы над и под плашкой.</p>
+        </div>
+        <div class="format-left"></div>
+        <div class="format-right"></div>
+        <div class="format-top"></div>
+        <style>
+            #format {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding-top: 6.1%;
+                padding-right: 11%;
+                padding-left: 11%;
+                padding-bottom: 12.5%;
+                background: linear-gradient(to top left, transparent 50%, #333 50%, #333 calc(50% + 1px), transparent calc(50% + 1px)),
+                linear-gradient(to top right, transparent 50%, #333 50%, #333 calc(50% + 1px), transparent calc(50% + 1px)),
+                #000;
+            }
+            #format::after {
+                bottom: 1.5em;
+                right: 2.5em;
+                left: auto;
+                top: auto;
+                height: auto;
+                width: auto;
+                padding: 0;
+                margin: 0;
+                font-size: 65%;
+            }
+            #format::before {
+                content: 'О дизайне';
+                position: absolute;
+                bottom: 1.5em;
+                left: 2.5em;
+                color: #fff;
+                font-size: 65%;
+            }
+            #format h2 {
+                font-size: 4.5em;
+                flex-basis: 100%;
+                position: absolute;
+                line-height: 1;
+                left: .96em;
+            }
+            #format .column-left {
+                flex-basis: 42.75%;
+                line-height: 1.4;
+                font-size: 67.5%;
+                border: 1px solid #333;
+                padding-top: 8.5em;
+            }
+            #format .column-right {
+                padding-top: 8.5em;
+                flex-basis: 42.75%;
+                line-height: 1.4;
+                font-size: 67.5%;
+                border: 1px solid #333;
+            }
+            .format-left {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 50%;
+                bottom: 0;
+                background: linear-gradient(to top left, transparent 50%, #333 50%, #333 calc(50% + 1px), transparent calc(50% + 1px));
+                z-index: -1;
+            }
+            .format-right {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(to top right, transparent 50%, #333 50%, #333 calc(50% + 1px), transparent calc(50% + 1px));
+                z-index: -1;
+            }
+            .format-top {
+                position: absolute;
+                top: 0;
+                left: 33.333%;
+                right: 33.333%;
+                bottom: 66.666%;
+                border-right: 1px solid #333;
+                background: linear-gradient(to top left, transparent 50%, #333 50%, #333 calc(50% + 1px), transparent calc(50% + 1px));
+                z-index: -1;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="formatWhite">
+        <h2>II. Формат и поля</h2>
+        <div class="column-left">
+            <p>На ощущение от вёрстки решительно влияет<span> </span> соотношение верхнего и бокового полей. Оди&shy;наковые вертикальные и горизонтальные поля — признак слабой, любительской, не&shy;вни&shy;мательной вёрстки.</p>
+            <p>Пропорции полей могут быть математически<span> </span> связаны с пропорциями формата или даже<span> </span> букв используемого шрифта, могут быть вы&shy;тянуты на глаз в ширину или в высоту.</p>
+        </div>
+        <div class="column-right">
+            <p>Добавление плашки, линейки или рамки соз&shy;даёт новый формат с собственным содер&shy;жанием и пропорциями полей. Вертикальные и горизонтальные поля не должны быть рав&shy;ны друг другу, причём нижнее поле долж&shy;но быть больше.</p>
+            <p>Расстояния вокруг горизонтальной границы<span> </span> модулей не могут быть равны: например от&shy;ступы над и под плашкой.</p>
+        </div>
+        <style>
+            #formatWhite {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding-top: 6.1%;
+                padding-right: 11%;
+                padding-left: 11%;
+                padding-bottom: 12.5%;
+                background: linear-gradient(to left, #eee, #fff, #fff, #ccc, #fff, #fff, #eee) #fff;
+                color: #000;
+            }
+            #formatWhite::after {
+                bottom: 1.5em;
+                right: 2.5em;
+                left: auto;
+                top: auto;
+                height: auto;
+                width: auto;
+                padding: 0;
+                margin: 0;
+                font-size: 65%;
+                color: #000;
+            }
+            #formatWhite::before {
+                content: 'О дизайне';
+                position: absolute;
+                bottom: 1.5em;
+                left: 2.5em;
+                color: #000;
+                font-size: 65%;
+            }
+            #formatWhite h2 {
+                font-size: 4.5em;
+                flex-basis: 100%;
+                position: absolute;
+                line-height: 1;
+                left: .96em;
+                color: #000;
+            }
+            #formatWhite .column-left {
+                flex-basis: 42.75%;
+                line-height: 1.4;
+                font-size: 67.5%;
+                padding-top: 8.5em;
+                color: #000;
+                text-align: justify;
+            }
+            #formatWhite .column-right {
+                padding-top: 8.5em;
+                flex-basis: 42.75%;
+                line-height: 1.4;
+                font-size: 67.5%;
+                color: #000;
+                text-align: justify;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="primitives">
+        <h2><a href="https://bureau.ru/bb/soviet/20140421/" target="_blank">Точка, линия, прямоугольник</a></h2>
+        <p>Якорные объекты (точки) — это самые заметные объекты на странице: иллюстрации, заголовки, фактоиды, логотипы и пиктограммы. Простой абзац наборного текста тоже выступает якорным объектом, если он окружён пустотой, или контрпространством. Точки могут выстраиваться в линии.</p>
+        <p>Прямоугольник — базовая фигура модульной вёрстки. Все модули макета должны иметь прямоугольную форму и составлять вместе общий прямоугольник страницы или экрана, которым они ограничены.</p>
+        <p>Любой якорный объект должен тяготеть или располагаться в одном из углов или в визуальном центре своего прямоугольника. Линии лучше привязывать к сторонам.</p>
+        <style>
+            #primitives {
+                padding-top: 1em;
+                background: linear-gradient(#000 92%, #222 92%);
+            }
+            #primitives h2 {
+                position: relative;
+                padding-left: 1.4em;
+                font-size: 350%;
+            }
+            #primitives h2::before {
+                content: 'III';
+                position: absolute;
+                left: -.4em;
+                top: -.25em;
+                background-color: #fff;
+                border-radius: 2em;
+                padding: .25em;
+                display: inline-block;
+                line-height: 1;
+                width: 1em;
+                text-align: center;
+                color: #000;
+            }
+            #primitives p {
+                font-size: 75%;
+                line-height: 1.4;
+            }
+            #primitives::after {
+                bottom: .5em;
+                right: 1.5em;
+                left: auto;
+                top: auto;
+                height: auto;
+                width: auto;
+                padding: 0;
+                margin: 0;
+                font-size: 65%;
+            }
+            #primitives::before {
+                content: 'О дизайне';
+                position: absolute;
+                bottom: .5em;
+                left: 1.5em;
+                color: #fff;
+                font-size: 65%;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="typography">
+        <h2>IV. <a href="https://www.artlebedev.ru/kovodstvo/sections/62/" target="_blank">Экранная типографика</a></h2>
+        <div class="column-left">“Первая школа SMM” (C) - курс для тех, кто хочет научиться продвигать себя (проекты, товары, услуги) в социальных сетях. Тел: 8 (996) 639-0149</div>
+        <div class="column-right">
+            <p>«Первая школа SMM» © — курс для тех, кто хочет научиться продвигать себя (проекты, товары, услуги) в социальных сетях.</p>
+            Тел. +7 996 639-01-49
+        </div>
+        <style>
+            #typography {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding-top: 4%;
+                padding-right: 11%;
+                padding-left: 11%;
+                padding-bottom: 12.5%;
+            }
+            #typography::after {
+                bottom: .5em;
+                right: 1.5em;
+                left: auto;
+                top: auto;
+                height: auto;
+                width: auto;
+                padding: 0;
+                margin: 0;
+                font-size: 65%;
+            }
+            #typography::before {
+                content: '»';
+                position: absolute;
+                bottom: 0;
+                left: 30%;
+                color: #333;
+                font-size: 3000%;
+                line-height: .8;
+                display: block;
+                font-weight: 900;
+                z-index: -1;
+            }
+            #typography h2 {
+                font-size: 3.25em;
+                flex-basis: 100%;
+            }
+            #typography div {
+                flex-basis: 42.75%;
+                line-height: 1.4;
+                font-size: 120%;
+            }
+            #typography p {
+                margin-bottom: .5em;
+                text-indent: -.5em;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="rokk">
+        <h2 class="read">Классика</h2>
+        <style>
+            #rokk {
+                background: url('pictures/rokk.jpg') center /cover;
+            }
+            #rokk h2 {
+                visibility: hidden;
+            }
+        </style>
+    </section>
+
+    <section class="slide section-title">
+        <h2>Оформление социальных сетей</h2>
+        <p>Визуально приятный профиль может уменьшить вам цену за подписчика, привлечь новых клиентов, сэкономить время, и просто хорошо выглядит 🙂</p>
+    </section>
+
+    <section class="slide">
+        <h2>Примеры оформления</h2>
+        <div class="columns three">
+            <div>
+                <h3>Хорошо</h3>
+                <ul>
+                    <li><a href="https://vk.com/skyeng" target="_blank">Skyeng</a></li>
+                    <li><a href="https://vk.com/dodotmn" target="_blank">Додо Пицца</a></li>
+                    <li><a href="https://www.instagram.com/pizzeriakml/" target="_blank">Пиццерия КМЛ</a></li>
+                    <li><a href="https://www.instagram.com/g.bar.moscow/" target="_blank">G.Bar</a></li>
+                    <li><a href="https://www.instagram.com/surfcoffee.tmn/" target="_blank">Surf Coffee</a></li>
+                    <li><a href="https://www.instagram.com/urban_island/" target="_blank">Urban Island</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Ок</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/teslaburgers/" target="_blank">Tesla Burgers</a></li>
+                    <li><a href="https://www.instagram.com/expresso.tmn/" target="_blank">Expresso</a></li>
+                    <li><a href="https://www.instagram.com/catinhat.shop/" target="_blank">Cat In Hat</a></li>
+                    <li><a href="https://www.instagram.com/mnogomebeli/" target="_blank">Много Мебели</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Плохо</h3>
+                <ul>
+                    <li><a href="https://vk.com/crk72">Центр русской культуры</a></li>
+                    <li><a href="https://vk.com/kony72">Конный Клуб «Ожогино»</a></li>
+                    <li><a href="https://www.instagram.com/magicsmile72/">Магия Улыбки</a></li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <section class="slide">
-        <h2>All kind of lists</h2>
-        <ol>
-            <li>Simple lists are marked with bullets</li>
-            <li>Ordered lists begin with a number</li>
-            <li>You can even nest lists one inside another
+        <h2 style="opacity: 0;">Инстаграм</h2>
+        <div class="columns two">
+            <div>
+                <h3>Тренды</h3>
                 <ul>
-                    <li>Or mix their types</li>
-                    <li>But do not go too far</li>
-                    <li>Otherwise audience will be bored</li>
+                    <li>Личный бренд</li>
+                    <li>Естественность</li>
+                    <li>Открытость</li>
+                    <li>Отсутствие видимой обработки</li>
+                    <li>Бодипозитив</li>
+                    <li>Поддержка меньшинств</li>
                 </ul>
-            </li>
-            <li>Look, seven rows exactly!</li>
-        </ol>
+            </div>
+            <div>
+                <h3>Антинтренды</h3>
+                <ul>
+                    <li>Переобработанные фото</li>
+                    <li>Фотостоки</li>
+                    <li>Воллпрессы</li>
+                    <li>Заезженные шаблоны и иконки</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section class="slide">
-        <h2>Serious citations</h2>
-        <figure>
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </blockquote>
-            <figcaption>Marcus Tullius Cicero</figcaption>
-        </figure>
+        <h2>Советы по ведению</h2>
+        <ul>
+            <li>Если у вас свой небольшой бизнес, не нужно создавать отдельный рабочий аккаунт.</li>
+            <li>Показывайте не только работы, но и лица и бытовуху. Сухие экспертные посты нужны, но неинтересны.</li>
+            <li>Не бойтесь, если в начале пути ваши соцсети могут выглядеть некрасиво/глупо/скучно, сконцентрируйтесь на пользе и развивайтесь. Люди начинают ходить на танцы, тренинги, растяжки, чтобы их лента смотрелась интересна. Компании создают уникальные интерьеры для красивых фоток.</li>
+            <li>Найдите приятные аккаунты, следите, вдохновляйтесь.</li>
+        </ul>
+        </div>
     </section>
 
     <section class="slide">
-        <h2>Code samples</h2>
-        <pre>
-            <code>&lt;!DOCTYPE html&gt;</code>
-            <code class="mark">&lt;html lang="en"&gt;</code>
-            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-            <code><mark>&lt;/head&gt;</mark></code>
-        </pre>
+        <h2>Советы про публикации</h2>
+        <ul>
+            <li>Выберите одно место для сохранения идей для постов</li>
+            <li>Старайтесь пуликовать посты каждый день</li>
+            <li>В неделю 4 рабочих и 3 развлекательных поста</li>
+            <li>Отслеживайте и реагируйте на комментарии</li>
+            <li>Ставьте геолокацию</li>
+            <li>Используйте хештеги</li>
+            <li>Используйте квадратные картинки для лёгкого дублирования контента</li>
+        </ul>
     </section>
 
     <section class="slide">
-        <h2>Even tables</h2>
-        <table>
-        <tr>
-            <th scope="col">Locavore</th>
-            <th>Umami</th>
-            <th>Helvetica</th>
-            <th>Vegan</th>
-        </tr>
-        <tr>
-            <th scope="row">Fingerstache</th>
-            <td>Kale</td>
-            <td>Chips</td>
-            <td>Keytar</td>
-        </tr>
-        <tr>
-            <th scope="row">Sriracha</th>
-            <td>Gluten-free</td>
-            <td>Ennui</td>
-            <td>Keffiyeh</td>
-        </tr>
-        <tr>
-            <th scope="row">Thundercats</th>
-            <td>Jean</td>
-            <td>Shorts</td>
-            <td>Biodiesel</td>
-        </tr>
-        <tr>
-            <th scope="row">Terry</th>
-            <td>Richardson</td>
-            <td>Swag</td>
-            <td>Blog</td>
-        </tr>
+        <h2>Второстепенные темы для личного бренда</h2>
+        <div class="columns two">
+            <ul>
+                <li>Отношения</li>
+                <li>Покупки на али</li>
+                <li>Бьюти</li>
+                <li>Спорт&thinsp;/&thinsp;фитнес</li>
+                <li>Питание&thinsp;/&thinsp;рецепты</li>
+                <li>Саморазвитие</li>
+                <li>Книги</li>
+                <li>Фильмы и сериалы</li>
+                <li>Путешествия</li>
+            </ul>
+            <ul>
+                <li>Здоровье&thinsp;/&thinsp;ЗОЖ</li>
+                <li>Языки</li>
+                <li>Обработка фото</li>
+                <li>Образование&thinsp;/&thinsp;воспитание</li>
+                <li>Социальные темы</li>
+                <li>Мода, стиль</li>
+                <li>Музыка</li>
+                <li>Продуктивность</li>
+                <li>Танцы</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Универсальные темы для постов</h2>
+        <div class="columns two">
+            <ul>
+                <li>Список полезных приложений&thinsp;/&thinsp;сайтов&thinsp;/&thinsp;книг&thinsp;/&thinsp;фильмов</li>
+                <li>Любимые продукты&thinsp;/&thinsp;средства</li>
+                <li>Источники вдохновения</li>
+                <li>Приложения для обработки фото</li>
+                <li>Куда бы потратили миллион</li>
+                <li>Лучшая суперспособность</li>
+                <li>Что вы делаете для планеты</li>
+                <li>5 смешных фактов о вас</li>
+            </ul>
+            <ul>
+                <li>Как вы пришли к тому, чем занимаетесь</li>
+                <li>Обзоры книг&thinsp;/&thinsp;фильмов</li>
+                <li>Цели на месяц&thinsp;/&thinsp;год</li>
+                <li>FAQ</li>
+                <li>Гардероб</li>
+                <li>Путешествия</li>
+                <li>10 источников счастья</li>
+                <li>10 правил по жизни</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Темы для закрепленных историй</h2>
+        <ul>
+            <li>О себе&thinsp;/&thinsp;компании</li>
+            <li>Цели</li>
+            <li>Лайфхаки</li>
+            <li>Как добраться</li>
+            <li>Акции</li>
+            <li>Меню&thinsp;/&thinsp;прайс</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Принцип компоновки ленты № 1</h2>
+        <div class="columns two">
+            <div>
+                <img src="https://thepreviewapp.com/wp-content/uploads/2018/08/instagram-theme-idea-natural-13.jpg" width="100%" alt="">
+            </div>
+            <p style="line-height: 1.4;">Минимализм и загруженность</p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Принцип компоновки ленты № 2</h2>
+        <div class="columns two">
+            <div>
+                <img src="https://static.makeuseof.com/wp-content/uploads/2019/04/urbanxkoi-instagram-feed.jpg" width="100%" alt="">
+            </div>
+            <p style="line-height: 1.4;">Тёмные и светлые фото</p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Принцип компоновки ленты № 3</h2>
+        <div class="columns two">
+            <div>
+                <img src="https://blog.planoly.com/hubfs/Imported_Blog_Media/color-themes-planoly-blog-happilygrey-3.png" width="100%" alt="">
+            </div>
+            <p style="line-height: 1.4;">Равновесие по цвету</p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Принцип компоновки ленты № 4</h2>
+        <div class="columns two">
+            <div>
+                <img src="https://i.pinimg.com/564x/f7/34/b0/f734b016024fd7cc5f111363889da99d.jpg" width="100%" alt="">
+            </div>
+            <p style="line-height: 1.4;">Акцентные цвета</p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Принцип компоновки ленты № 5</h2>
+        <div class="columns two">
+            <div>
+                <img src="https://www.plannthat.com/wp-content/uploads/2017/08/instagram-feed-themes-colours-splash.jpg" width="100%" alt="">
+            </div>
+            <p style="line-height: 1.4;">Равновесие видов контента: селфи, видео, коллажи, дальний план, макро</p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Принцип компоновки ленты № 6</h2>
+        <div class="columns two">
+            <div>
+                <img src="pictures/kate.jpg" width="100%" alt="">
+            </div>
+            <p style="line-height: 1.4;">Равновесие планов: портрет, заполненный кадр, дальний план, части тела</p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Планируйте посты заранее</h2>
+        <p style="line-height: 1.4;">Выберите приложение для планирования ленты инстаграма, и попробуйте собрать визуал под свой контент-план.</p>
+        <ul>
+            <li><a href="https://www.planoly.com">PLANOLY</a></li>
+            <li><a href="https://www.unum.la">UNUM</a></li>
+            <li><a href="https://inpreview.me">Inpreview</a></li>
+        </ul>
+        <p><a href="https://vk.com/@business-fotobanki" target="_blank">Источники картинок</a></p>
+    </section>
+
+    <section class="slide">
+        <h2><a href="https://vk.com/@business-razmery" target="_blank">Рекомендованные размеры для ВКонтакте</a></h2>
+        <table class="striped">
+            <tr>
+                <th>Картинки к посту</th>
+                <td style="line-height: 1.4; padding-right: 10px;">1020x1020&thinsp;/&thinsp;1020x680</td>
+                <th>Обложка</th>
+                <td>1590x400</td>
+            </tr>
+            <tr>
+                <th style="line-height: 1.2;">Прикрепленная ссылка</th>
+                <td>1074x480</td>
+                <th>Аватар</th>
+                <td>400x400</td>
+            </tr>
+            <tr>
+                <th>Картинка в опрос</th>
+                <td>1020x400</td>
+                <th style="line-height: 1.2;">Обложка альбома</th>
+                <td>1200x800</td>
+            </tr>
+            <tr>
+                <th style="line-height: 1.2;">Истории, живые обложки</th>
+                <td>1080x1920</td>
+                <th>Обложка статьи</th>
+                <td>1020x572</td>
+            </tr>
+            <tr>
+                <th><a href="https://vk.com/faq11936" target="_blank">Таргет слева</a></th>
+                <td style="line-height: 1.4;">145х85, 145х145, 145х165</td>
+                <th>Товары</th>
+                <td>1000x1000</td>
+            </tr>
         </table>
-        <p>It’s good to have information organized.</p>
-    </section>
-
-    <section class="slide" id="picture">
-        <h2>Pictures</h2>
-        <figure>
-            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-            <figcaption class="copyright right white">
-                <a href="https://fiftyfootshadows.net">© John Carey</a>
-            </figcaption>
-        </figure>
-        <style>
-            #picture h2 {
-                color: white;
-            }
-        </style>
     </section>
 
     <section class="slide">
-        <h2 class="shout shrink">You can even shout this way</h2>
+        <h2>Рекомендованные размеры для Инстаграма</h2>
+        <table class="striped">
+            <tr>
+                <th>Аватар</th>
+                <td>400x400</td>
+            </tr>
+            <tr>
+                <th><a href="https://help.instagram.com/1631821640426723" target="_blank">Пост</a></th>
+                <td>1080x1080&thinsp;/&thinsp;1080x1350</td>
+            </tr>
+            <tr>
+                <th>Истории</th>
+                <td>1080x1920</td>
+            </tr>
+            <tr>
+                <th><a href="https://help.instagram.com/1038071743007909" target="_blank">IGTV</a></th>
+                <td>1080x1920&thinsp;/&thinsp;1920x1080</td>
+            </tr>
+            <tr>
+                <th>Обложка IGTV</th>
+                <td>420х654</td>
+            </tr>
+        </table>
     </section>
 
     <section class="slide">
-        <h2>Inner navigation</h2>
-        <ol>
-            <li>Lets you reveal list items one by one</li>
-            <li class="next">To keep some key points</li>
-            <li class="next">In secret from audience</li>
-            <li class="next">But it will work only once</li>
-            <li class="next">Nobody wants to see the same joke twice</li>
-        </ol>
+        <div class="columns two">
+            <div>
+                <img src="pictures/moychay.jpg" width="100%" alt="Профиль тюменского филиала МОЙЧАЙ.РУ">
+            </div>
+            <div>
+                <h2>Простор для дизайна</h2>
+                <ul>
+                    <li>Аватар</li>
+                    <li>Обложка</li>
+                    <li>Брендированные посты</li>
+                    <li>Фотографии и альбомы</li>
+                    <li>Видео</li>
+                    <li>Анимация</li>
+                    <li>Истории</li>
+                    <li>Таргет</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <section class="slide" id="see-more">
-        <h2 class="shout">
-            <img src="pictures/logo.svg" alt="Shower logo">
-            <a href="https://github.com/shower/shower">See more on GitHub</a>
-        </h2>
-        <style>
-            #see-more h2 {
-                font-size: 100px
-            }
-
-            #see-more img {
-                width: 0.72em;
-                height: 0.72em;
-            }
-        </style>
+    <section class="slide section-title">
+        <h2>Всё это можно делать самим, поручать мастерам, или находить.</h2>
+        <p>Заказать дизайн можно в агентствах, на <a href="https://freelance.ru" target="_blank">freelance.ru</a> или у знакомых студентов. Поймите какой результат вам нужен, и четко формулируйте задачи.</p>
     </section>
-
-    <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
-    </footer>
 
     <div class="progress"></div>
 
     <script src="node_modules/@shower/core/dist/shower.js"></script>
-    <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
 
 </body>
 </html>
