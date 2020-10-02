@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Дизайн в социальных сетях</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Дизайн в социальных сетях</title>
     <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
     <style>
         .shower {
@@ -11,7 +11,7 @@
         }
         .slide {
             background-color: #000;
-            color: fff;
+            color: #fff;
         }
         .slide>*, .slide h2 {
             color: #fff;
@@ -188,9 +188,9 @@
 
     <section class="slide" id="today">
         <h2>Наши дни</h2>
-        <img class="place left" height="100%" src="pictures/ralph.jpg" alt="Интернет.">
-        <img class="place" height="100%" src="pictures/recipes.webp" alt="Голос.">
-        <img class="place right" height="100%" src="pictures/banksy.jpg" alt="Бэнкси.">
+        <img class="place left" style="height: 100%;" src="pictures/ralph.jpg" alt="Интернет.">
+        <img class="place" style="height: 100%;" src="pictures/recipes.webp" alt="Голос.">
+        <img class="place right" style="height: 100%;" src="pictures/banksy.jpg" alt="Бэнкси.">
         <style>
             #today h2 {
                 position: relative;
@@ -224,9 +224,9 @@
 
     <section class="slide" id="categories">
         <h2>Три категории дизайна</h2>
-        <img class="place next left" height="100%" src="pictures/stool.jpg" alt="Табуретка.">
-        <img class="place next" height="100%" src="pictures/throne.jpg" alt="Трон.">
-        <img class="place next right" height="100%" src="pictures/chair.jpg" alt="Комфортное кресло на колёсиках.">
+        <img class="place next left" style="height: 100%;" src="pictures/stool.jpg" alt="Табуретка.">
+        <img class="place next" style="height: 100%;" src="pictures/throne.jpg" alt="Трон.">
+        <img class="place next right" style="height: 100%;" src="pictures/chair.jpg" alt="Комфортное кресло на колёсиках.">
         <style>
             #categories h2 {
                 position: relative;
@@ -239,8 +239,8 @@
     <section class="slide">
         <h2>Изображения состоят из пикселей</h2>
         <div class="columns two">
-            <p><img src="pictures/mario.jpg" width="100%" alt="Пиксельный Марио."></p>
-            <p>Один пиксель — один цвет<br><img src="pictures/pixels.jpg" width="100%" alt="Пиксели на экране."></p>
+            <p><img src="pictures/mario.jpg" style="width: 100%;" alt="Пиксельный Марио."></p>
+            <p>Один пиксель — один цвет<br><img src="pictures/pixels.jpg" style="width: 100%;" alt="Пиксели на экране."></p>
         </div>
     </section>
 
@@ -248,9 +248,9 @@
         <h2>Цветовая модель RGB</h2>
         <form class="columns two">
             <fieldset>
-                <p><label>R: <input type="range" min="0" max="255" name="r" pattern="[0-9]*" value="255"> <output>255</output></label></p>
-                <p><label>G: <input type="range" min="0" max="255" name="g" pattern="[0-9]*" value="255"> <output>255</output></label></p>
-                <p><label>B: <input type="range" min="0" max="255" name="b" pattern="[0-9]*" value="255"> <output>255</output></label></p>
+                <p>R: <input aria-label="Красный" type="range" min="0" max="255" name="r" value="255"> <output>255</output></p>
+                <p>G: <input aria-label="Зелёный" type="range" min="0" max="255" name="g" value="255"> <output>255</output></p>
+                <p>B: <input aria-label="Синий" type="range" min="0" max="255" name="b" value="255"> <output>255</output></p>
                 <output name="hex">#FFFFFF</output>
             </fieldset>
             <div class="model rgb">
@@ -273,7 +273,7 @@
                 align-self: center;
                 text-align: center;
             }
-            #color label {
+            #color p {
                 text-align: left;
                 display: flex;
             }
@@ -695,8 +695,6 @@
                 align-items: flex-end;
                 z-index: -1;
             }
-            #headings img {
-            }
         </style>
     </section>
 
@@ -786,7 +784,6 @@
             <li>Не бойтесь, если в начале пути ваши соцсети могут выглядеть некрасиво/глупо/скучно, сконцентрируйтесь на пользе и развивайтесь. Люди начинают ходить на танцы, тренинги, растяжки, чтобы их лента смотрелась интересна. Компании создают уникальные интерьеры для красивых фоток.</li>
             <li>Найдите приятные аккаунты, следите, вдохновляйтесь.</li>
         </ul>
-        </div>
     </section>
 
     <section class="slide">
@@ -833,7 +830,7 @@
         <h2>Универсальные темы для постов</h2>
         <div class="columns two">
             <ul>
-                <li>Список полезных приложений&thinsp;/&thinsp;сайтов&thinsp;/&thinsp;книг&thinsp;/&thinsp;фильмов</li>
+                <li>Список полезных приложений&thinsp;/&thinsp;сайтов&thinsp;/&thinsp;книг&thinsp;/&thinsp;фильмов</li>
                 <li>Любимые продукты&thinsp;/&thinsp;средства</li>
                 <li>Источники вдохновения</li>
                 <li>Приложения для обработки фото</li>
@@ -871,7 +868,7 @@
         <h2>Принцип компоновки ленты № 1</h2>
         <div class="columns two">
             <div>
-                <img src="https://thepreviewapp.com/wp-content/uploads/2018/08/instagram-theme-idea-natural-13.jpg" width="100%" alt="">
+                <img src="https://thepreviewapp.com/wp-content/uploads/2018/08/instagram-theme-idea-natural-13.jpg" style="width: 100%;" alt="">
             </div>
             <p style="line-height: 1.4;">Минимализм и загруженность</p>
         </div>
@@ -881,7 +878,7 @@
         <h2>Принцип компоновки ленты № 2</h2>
         <div class="columns two">
             <div>
-                <img src="https://static.makeuseof.com/wp-content/uploads/2019/04/urbanxkoi-instagram-feed.jpg" width="100%" alt="">
+                <img src="https://static.makeuseof.com/wp-content/uploads/2019/04/urbanxkoi-instagram-feed.jpg" style="width: 100%;" alt="">
             </div>
             <p style="line-height: 1.4;">Тёмные и светлые фото</p>
         </div>
@@ -891,7 +888,7 @@
         <h2>Принцип компоновки ленты № 3</h2>
         <div class="columns two">
             <div>
-                <img src="https://blog.planoly.com/hubfs/Imported_Blog_Media/color-themes-planoly-blog-happilygrey-3.png" width="100%" alt="">
+                <img src="https://blog.planoly.com/hubfs/Imported_Blog_Media/color-themes-planoly-blog-happilygrey-3.png" style="width: 100%;" alt="">
             </div>
             <p style="line-height: 1.4;">Равновесие по цвету</p>
         </div>
@@ -901,7 +898,7 @@
         <h2>Принцип компоновки ленты № 4</h2>
         <div class="columns two">
             <div>
-                <img src="https://i.pinimg.com/564x/f7/34/b0/f734b016024fd7cc5f111363889da99d.jpg" width="100%" alt="">
+                <img src="https://i.pinimg.com/564x/f7/34/b0/f734b016024fd7cc5f111363889da99d.jpg" style="width: 100%;" alt="">
             </div>
             <p style="line-height: 1.4;">Акцентные цвета</p>
         </div>
@@ -911,7 +908,7 @@
         <h2>Принцип компоновки ленты № 5</h2>
         <div class="columns two">
             <div>
-                <img src="https://www.plannthat.com/wp-content/uploads/2017/08/instagram-feed-themes-colours-splash.jpg" width="100%" alt="">
+                <img src="https://www.plannthat.com/wp-content/uploads/2017/08/instagram-feed-themes-colours-splash.jpg" style="width: 100%;" alt="">
             </div>
             <p style="line-height: 1.4;">Равновесие видов контента: фотографии, селфи, короткие видео, IGTV, коллажи, карусели</p>
         </div>
@@ -921,7 +918,7 @@
         <h2>Принцип компоновки ленты № 6</h2>
         <div class="columns two">
             <div>
-                <img src="pictures/kate.jpg" width="100%" alt="">
+                <img src="pictures/kate.jpg" style="width: 100%;" alt="">
             </div>
             <p style="line-height: 1.4;">Равновесие планов: портрет, заполненный кадр, дальний план, части тела</p>
         </div>
@@ -1003,7 +1000,7 @@
     <section class="slide">
         <div class="columns two">
             <div>
-                <img src="pictures/moychay.jpg" width="100%" alt="Профиль тюменского филиала МОЙЧАЙ.РУ">
+                <img src="pictures/moychay.jpg" style="width: 100%;" alt="Профиль тюменского филиала МОЙЧАЙ.РУ">
             </div>
             <div>
                 <h2>Простор для дизайна</h2>
@@ -1270,7 +1267,7 @@
             </li>
             <li value="4">Просите ставить реакции на истории</li>
             <li value="5">Мифы на экспертную тему</li>
-            <li value="6">Перемванивайте людей из историй в посты и обратно</li>
+            <li value="6">Переманивайте людей из историй в посты и обратно</li>
             <li value="7">Открытая петля</li>
         </ol>
     </section>
