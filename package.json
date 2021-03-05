@@ -23,6 +23,7 @@
   "files": [
     "pictures/**",
     "index.html",
+    "favicon.ico",
     "LICENSE.md",
     "README.md"
   ],
@@ -32,11 +33,11 @@
     "@shower/ribbon": "^3.3.0"
   },
   "devDependencies": {
-    "object-path": ">=0.11.5",
-    "yargs-parser": ">=5.0.0-security.0",
-    "http-proxy": ">=1.18.1",
     "@shower/cli": "^0.3.0",
-    "path-exists-cli": "^1.0.0"
+    "http-proxy": ">=1.18.1",
+    "object-path": ">=0.11.5",
+    "path-exists-cli": "^1.0.0",
+    "yargs-parser": ">=5.0.0-security.0"
   },
   "scripts": {
     "pdf": "shower pdf",
