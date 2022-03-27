@@ -1,7 +1,7 @@
 {
   "name": "@shower/shower",
   "description": "Shower HTML presentation engine",
-  "version": "3.0.0",
+  "version": "3.3.0",
   "author": {
     "name": "Vadim Makeev",
     "url": "https://pepelsbey.net/"
@@ -23,28 +23,24 @@
   "files": [
     "pictures/**",
     "index.html",
-    "favicon.ico",
     "LICENSE.md",
     "README.md"
   ],
   "dependencies": {
-    "@shower/core": "^3.1.0",
-    "@shower/material": "^2.4.1",
-    "@shower/ribbon": "^3.4.1"
+    "@shower/core": "^3.3.0",
+    "@shower/material": "^2.5.0",
+    "@shower/ribbon": "^3.5.0"
   },
   "devDependencies": {
-    "@shower/cli": "^0.3.0",
-    "http-proxy": ">=1.18.1",
-    "object-path": ">=0.11.5",
-    "path-exists-cli": "^1.0.0",
-    "yargs-parser": ">=5.0.0-security.0"
+    "@shower/cli": "^0.3.1",
+    "path-exists-cli": "^2.0.0"
   },
   "scripts": {
     "pdf": "shower pdf",
     "start": "shower serve",
-    "prepare": "shower prepare --files '**' --files '!{docs,node_modules,prepared}{,/**}' --files '!*.{md,toml,json}'",
-    "archive": "shower archive --files '**' --files '!{docs,node_modules,prepared}{,/**}' --files '!*.{md,toml,json}'",
-    "publish": "shower publish --files '**' --files '!{docs,node_modules,prepared}{,/**}' --files '!*.{md,toml,json}'",
-    "test": "npm run prepare && ls prepared && npm run archive && path-exists presentation.zip"
+    "bundle": "shower bundle --files '**' --files '!{docs,node_modules,bundled}{,/**}' --files '!*.{md,toml,json}'",
+    "archive": "shower archive --files '**' --files '!{docs,node_modules,bundled}{,/**}' --files '!*.{md,toml,json}'",
+    "publish": "shower publish --files '**' --files '!{docs,node_modules,bundled}{,/**}' --files '!*.{md,toml,json}'",
+    "test": "npm run bundle && ls bundled && npm run archive && path-exists presentation.zip"
   }
 }
