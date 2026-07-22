@@ -32,7 +32,7 @@
     "@shower/ribbon": "^3.5.0"
   },
   "devDependencies": {
-    "@shower/cli": "^0.4.0",
+    "@shower/cli": "^1.1.1",
     "path-exists-cli": "^2.0.0"
   },
   "scripts": {
